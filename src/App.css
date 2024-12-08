@@ -1,0 +1,123 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #c8bdbd;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.2s;
+  text-align: center;
+  aspect-ratio: 1 / 1;
+}
+
+.card h2 {
+  font-size: 24px;
+  color: #1c1c1c;
+  margin: 0 0 20px 0;
+  align-self: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  color: #333;
+  font-weight: bold;
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  font-size: 24px;
+}
+
+.header img {
+  height: 60px;
+  width: auto;
+}
+
+.card button.tablice {
+  background-color: #a42222;
+  color: white;
+}
+
+.card button.tablice:hover {
+  background-color: #8b1d1d;
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .card button {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .header {
+    font-size: 20px;
+    padding: 5px 10px;
+    height: auto;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 5px 10px;
+    height: auto;
+  }
+}
